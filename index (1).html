@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agios : récupère les frais bancaires prélevés à tort</title>
+<meta name="description" content="Dépose ton relevé, on repère chaque ligne de frais, on la compare aux plafonds légaux et on rédige ton courrier de réclamation. 19 €, une seule fois.">
+<meta property="og:title" content="Agios : récupère les frais bancaires prélevés à tort">
+<meta property="og:description" content="Commissions d’intervention, frais de rejet, options inutiles : on les repère et on rédige ta réclamation. 19 €, une seule fois.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<style>
+:root{--paper:#FBFBF8;--ink:#16222B;--muted:#55636d;--line:#d9dcd6;--blue:#1F3FBF;--hl:#FFE45C}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.15;margin:0 0 .5em;font-weight:700}
+h1{font-size:clamp(2rem,8vw,3.2rem)}
+h2{font-size:clamp(1.55rem,5.5vw,2.1rem)}
+h3{font-size:1.15rem}
+p{margin:0 0 1em}
+a{color:var(--blue)}
+.wrap{max-width:640px;margin:0 auto;padding:0 20px}
+section{padding:44px 0;border-top:1px solid var(--line)}
+header{padding:18px 0}
+.logo{font:700 1.3rem Georgia,serif;text-decoration:none;color:var(--ink)}
+.hero{padding:20px 0 44px;border:0}
+.lead{font-size:1.15rem;color:var(--muted)}
+mark{background:var(--hl);color:var(--ink);padding:0 .15em}
+.btn{display:block;text-align:center;background:var(--blue);color:#fff;font-weight:700;font-size:1.1rem;text-decoration:none;padding:17px 22px;border-radius:10px;min-height:56px}
+.btn:hover,.btn:focus-visible{background:#172f94;outline:3px solid var(--hl);outline-offset:2px}
+.small{font-size:.9rem;color:var(--muted)}
+.stmt{background:#fff;border:1px solid var(--line);border-radius:6px;padding:14px 16px;margin:26px 0;font:.88rem/1.5 ui-monospace,Menlo,Consolas,monospace}
+.stmt div{display:flex;justify-content:space-between;gap:12px;padding:5px 0;border-bottom:1px dashed var(--line)}
+.stmt div:last-of-type{border:0}
+.stmt .fee{background:var(--hl);margin:0 -8px;padding:5px 8px}
+.stmt .cap{font:.78rem system-ui,sans-serif;color:var(--muted);margin-top:8px}
+ul.clean{list-style:none;padding:0;margin:0}
+ul.clean li{padding:14px 0;border-bottom:1px solid var(--line)}
+ul.clean li:last-child{border:0}
+ol.steps{padding-left:1.2em;margin:0}
+ol.steps li{margin-bottom:.8em}
+.offer{background:#fff;border:2px solid var(--ink);border-radius:12px;padding:24px 20px}
+.price{font:700 3rem Georgia,serif;line-height:1}
+.guar{background:var(--hl);border-radius:8px;padding:14px 16px;margin:18px 0}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+summary{font-weight:700;cursor:pointer;min-height:28px}
+details p{margin:10px 0 0;color:var(--muted)}
+footer{padding:32px 0 60px;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}
+footer a{margin-right:14px}
+.legal{padding:36px 0}
+.legal h2{font-size:1.3rem}
+.legal p,.legal li{font-size:.95rem;color:var(--muted)}
+.todo{background:#ffd9d2;color:#7a1f10;padding:0 .2em;font-weight:600}
+@media(min-width:700px){body{font-size:18px}.btn{display:inline-block;padding:17px 36px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a class="logo" href="#">Agios</a></header>
+
+<main>
+<section class="hero">
+<h1>Ta banque t’a prélevé des frais. Tu peux en récupérer une partie.</h1>
+<p class="lead">Commissions d’intervention, frais de rejet, options jamais utilisées : ils arrivent par petites lignes illisibles. Beaucoup sont <mark>plafonnés par la loi</mark>, et presque personne ne les conteste.</p>
+<div class="stmt" aria-label="Exemple de relevé avec frais surlignés">
+<div><span>CB SUPERMARCHE</span><span>-42,30</span></div>
+<div class="fee"><span>COMMISSION D’INTERVENTION</span><span>-8,00</span></div>
+<div><span>PRLV ASSURANCE</span><span>-23,10</span></div>
+<div class="fee"><span>FRAIS REJET PRELEVEMENT</span><span>-20,00</span></div>
+<div class="fee"><span>COTISATION OPTION</span><span>-3,50</span></div>
+<p class="cap">Exemple illustratif. Sur ton relevé, on surligne les vraies lignes.</p>
+</div>
+<a class="btn" href="#offre">Récupérer mes frais, 19 €</a>
+<p class="small" style="margin-top:12px">Paiement unique. Pas d’abonnement. Remboursé si tu n’es pas satisfait.</p>
+</section>
+
+<section>
+<h2>Ce que tu reçois</h2>
+<ul class="clean">
+<li><h3>Toutes tes lignes de frais repérées</h3>Tu m’envoies ton relevé, on retrouve chaque commission, rejet et option facturée.</li>
+<li><h3>Le total sur douze mois</h3>Un chiffre clair, comparé aux plafonds légaux qui s’appliquent à ta situation.</li>
+<li><h3>Ton courrier de réclamation, prêt</h3>Rédigé, adressé à ton agence, avec les arguments. Tu l’envoies en deux minutes.</li>
+</ul>
+</section>
+
+<section>
+<h2>Comment ça se passe</h2>
+<ol class="steps">
+<li>Tu paies 19 € sur cette page, en carte, en moins d’une minute.</li>
+<li>Tu reçois un email de confirmation avec la marche à suivre pour envoyer ton relevé (PDF ou photo).</li>
+<li>Sous 48 heures, tu reçois ton dossier par email : frais repérés, total, courrier prêt.</li>
+</ol>
+<p class="small">Ton relevé n’est utilisé que pour ton dossier, puis supprimé.</p>
+</section>
+
+<section id="offre">
+<h2>Ton dossier complet</h2>
+<div class="offer">
+<p class="price">19 €</p>
+<p>Une seule fois, soit moins de 5 centimes par jour sur un an. Pas d’abonnement, rien à résilier.</p>
+<div class="guar"><strong>Satisfait ou remboursé, 14 jours.</strong> Si le dossier ne te sert à rien, écris-moi à <mark>agios.frais@gmail.com</mark> avec « Remboursement » en objet. Pas de justification à fournir : remboursement sous 5 jours ouvrés.</div>
+<a class="btn" href="https://buy.stripe.com/5kQ4gB8chcIO2eR54Ee3e00" rel="noopener">Payer 19 € et commencer</a>
+<p class="small" style="margin-top:12px">Paiement sécurisé par Stripe. Sans engagement.</p>
+</div>
+</section>
+
+<section>
+<h2>Questions fréquentes</h2>
+<details><summary>Est-ce que ça marche pour mon cas ?</summary><p>Si ton relevé contient des lignes de frais (intervention, rejet, options, cotisations), oui. Si on n’en trouve aucune, on te le dit et tu es remboursé.</p></details>
+<details><summary>Combien de temps ça me prend ?</summary><p>Environ cinq minutes : tu paies, tu envoies ton relevé, puis tu postes le courrier reçu sous 48 heures.</p></details>
+<details><summary>Et si je veux arrêter ?</summary><p>Il n’y a rien à arrêter : c’est un paiement unique. Et tu as 14 jours pour demander le remboursement.</p></details>
+<details><summary>À quoi sert exactement ce que je paie ?</summary><p>À l’analyse de ton relevé, au calcul comparé aux plafonds légaux et à la rédaction de ton courrier de réclamation. La banque reste libre de sa réponse : on ne peut pas promettre un montant remboursé.</p></details>
+</section>
+
+<section>
+<h2>Prêt à voir ce que ça donne ?</h2>
+<a class="btn" href="#offre">Récupérer mes frais, 19 €</a>
+</section>
+</main>
+
+<footer>
+<a href="#mentions">Mentions légales</a><a href="#cgv">CGV</a><a href="#confidentialite">Confidentialité</a>
+<p style="margin-top:14px">© Agios</p>
+</footer>
+
+<section class="legal" id="mentions">
+<h2>Mentions légales</h2>
+<p>Éditeur : Tristan van der Straten, entrepreneur individuel (personne physique), n° d’entreprise (BCE) 1002.568.541, TVA BE 1002.568.541, Rue Malhavez 1, boîte B, 4500 Huy, Belgique. Contact : agios.frais@gmail.com.<br>Directeur de la publication : Tristan van der Straten.<br>Hébergeur : Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis.</p>
+</section>
+<section class="legal" id="cgv">
+<h2>Conditions générales de vente</h2>
+<p>Objet : vente d’un dossier d’analyse de frais bancaires (repérage des frais, total sur douze mois, courrier de réclamation), au prix de 19 € TTC, payable une fois par carte via Stripe.</p>
+<p>Livraison : par email, sous 48 heures après réception du relevé.</p>
+<p>Garantie : remboursement intégral sur simple demande par email dans les 14 jours suivant l’achat, sous 5 jours ouvrés.</p>
+<p>Droit de rétractation : pour un contenu numérique fourni avant la fin du délai légal de 14 jours, le client accepte l’exécution immédiate ; la garantie ci-dessus s’applique néanmoins.</p>
+<p>Aucun montant de remboursement par la banque n’est garanti.</p>
+</section>
+<section class="legal" id="confidentialite">
+<h2>Politique de confidentialité</h2>
+<p>Données traitées : email, relevé bancaire transmis, données de paiement (traitées par Stripe, jamais stockées chez nous).</p>
+<p>Finalité : produire ton dossier. Le relevé est supprimé 7 jours après la livraison du dossier.</p>
+<p>Tes droits (accès, rectification, suppression) : écris à agios.frais@gmail.com. Tu peux aussi saisir l’Autorité de protection des données (Belgique) ou la CNIL (France).</p>
+</section>
+</div>
+</body>
+</html>
